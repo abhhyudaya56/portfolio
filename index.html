@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhyudaya Solanki | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Roboto', sans-serif; line-height:1.6; background:#1a1a1a; color:#e0e0e0; }
+
+  a { text-decoration:none; color:inherit; }
+
+  section { padding:80px 20px; max-width:1000px; margin:auto; }
+
+  /* Hero */
+  #hero { display:flex; flex-direction:column; justify-content:center; align-items:center; height:90vh; text-align:center; background: linear-gradient(135deg, #111, #222, #111); border-radius:10px; margin-bottom:40px; position:relative; overflow:hidden;}
+  #hero h1 { font-size:3rem; margin-bottom:20px; color:#00cfff; letter-spacing:2px; }
+  #hero p { font-size:1.3rem; color:#a0f0ff; min-height:30px; }
+
+  .typewriter span { border-right:2px solid #00cfff; animation: blink 0.7s infinite; }
+  @keyframes blink { 0%,50%,100% { border-color:#00cfff; } 25%,75% { border-color:transparent; } }
+
+  /* Section titles */
+  h2 { font-size:2rem; margin-bottom:20px; border-bottom:2px solid #444; display:inline-block; padding-bottom:5px; color:#00cfff; }
+
+  /* About */
+  #about p { font-size:1.1rem; color:#cfcfcf; margin-bottom:15px; }
+
+  /* Team */
+  #team { background:#222; border-radius:10px; padding:40px 20px; margin-bottom:40px; }
+  #team p { font-size:1.1rem; margin-bottom:10px; }
+  #team ul { list-style:none; padding-left:0; }
+  #team li { margin-bottom:10px; padding-left:10px; border-left:3px solid #00cfff; }
+
+  /* Gear */
+  #gear { background:#1f1f1f; border-radius:10px; padding:40px 20px; margin-bottom:40px; }
+  #gear p { font-size:1.1rem; margin-bottom:10px; }
+  #gear ul { list-style:none; padding-left:0; }
+  #gear li { margin-bottom:10px; padding-left:10px; border-left:3px solid #00cfff; }
+
+  /* Qualities */
+  #qualities { background:#222; border-radius:10px; padding:40px 20px; margin-bottom:40px; }
+  #qualities ul { list-style:none; padding-left:0; }
+  #qualities li { margin-bottom:10px; padding-left:10px; border-left:3px solid #00cfff; }
+
+  /* Contact */
+  #contact a { display:inline-block; margin-right:20px; color:#00cfff; transition:color 0.3s; }
+  #contact a:hover { color:#33e0ff; }
+
+  /* Fade-in scroll animation */
+  .fade-in { opacity:0; transform:translateY(20px); transition:all 0.8s ease-out; }
+  .fade-in.show { opacity:1; transform:translateY(0); }
+
+  /* Highlight effect */
+  .highlight { background:#111; padding:20px; border-radius:10px; transition:transform 0.3s, box-shadow 0.3s; }
+  .highlight:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,200,255,0.4); }
+</style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h1>Abhyudaya Solanki</h1>
+    <p class="typewriter" id="typewriter"></p>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I'm Abhyudaya Solanki, a student, sim racer, and coder who thrives on precision, speed, and overcoming obstacles. Getting into sim racing was a real struggle. I had <strong>zero parental support</strong>, and acquiring a high-quality wheel seemed impossible. I saved every bit I could, faced countless challenges, and finally overcame them to buy my first Thrustmaster T128. That journey taught me patience, resilience, and the power of persistence.</p>
+    <p>Now, I combine technical skill, strategic thinking, and relentless practice in everything I do—planning races with my team, perfecting car setups, and building projects that push my limits. My journey is one of struggle, learning, and striving for excellence, every single day.</p>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="fade-in">
+    <h2>Team Bharat Apex</h2>
+    <div class="highlight">
+      <p>As a core member and strategist, I contribute to:</p>
+      <ul>
+        <li>Race planning and stint management for endurance events</li>
+        <li>Coordinating team communication and strategy execution</li>
+        <li>Optimizing car setups and performance during races</li>
+        <li>Training and mentoring new team members</li>
+      </ul>
+      <p>Our team thrives on precision, teamwork, and pushing limits while maintaining consistency and control. Being part of Team Bharat Apex has taught me leadership, discipline, and how to turn individual skills into collective success.</p>
+    </div>
+  </section>
+
+  <!-- Gear -->
+  <section id="gear" class="fade-in">
+    <h2>My Gear</h2>
+    <div class="highlight">
+      <p>Tools that give me precision and control:</p>
+      <ul>
+        <li>Thrustmaster T128 Racing Wheel</li>
+        <li>Elite X PC Controller</li>
+        <li>Intel N100 CPU (TDP 15W), 16GB RAM, 512GB NVMe SSD, no dedicated GPU</li>
+        <li>60Hz Monitor</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Qualities -->
+  <section id="qualities" class="fade-in">
+    <h2>My Qualities</h2>
+    <div class="highlight">
+      <ul>
+        <li><strong>Leadership:</strong> Leading Team Bharat Apex, strategizing stints, coordinating members under pressure.</li>
+        <li><strong>Observation:</strong> Noticing tiny changes in car behavior, track conditions, and opponents' patterns.</li>
+        <li><strong>Discipline:</strong> Sticking to training schedules, setups, and strategic plans relentlessly.</li>
+        <li><strong>Resilience:</strong> Overcoming challenges like lack of support and limited resources to achieve goals.</li>
+        <li><strong>Strategic Thinking:</strong> Planning race stints, tire usage, and setups for maximum efficiency.</li>
+        <li><strong>Adaptability:</strong> Adjusting to new cars, tracks, and unexpected race situations smoothly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Reach me on: 
+      <a href="https://github.com/abhhyudaya56" target="_blank">GitHub</a>
+      <a href="https://www.instagram.com/abhyudaya.solanki/" target="_blank">Instagram</a>
+      <a href="https://www.twitch.tv/slipstreamking1" target="_blank">Twitch</a>
+      <a href="https://www.youtube.com/@56A.Solanki" target="_blank">YouTube</a>
+      <a href="mailto:abhyudayasolanki.56@gmail.com">Email</a>
+      <span>Discord: 1298278564894085131</span>
+    </p>
+  </section>
+
+<script>
+  // Typewriter Effect
+  const typewriterText = ["Sim Racer", "Student", "Strategist"];
+  let i=0, j=0;
+  const typewriterEl = document.getElementById("typewriter");
+  function typeWriter(){
+    if(i<typewriterText.length){
+      if(j<typewriterText[i].length){
+        typewriterEl.innerHTML += typewriterText[i][j];
+        j++;
+        setTimeout(typeWriter,150);
+      }else{
+        setTimeout(()=>{
+          typewriterEl.innerHTML="";
+          j=0;
+          i=(i+1)%typewriterText.length;
+          typeWriter();
+        },1500);
+      }
+    }
+  }
+  typeWriter();
+
+  // Scroll fade-in animation
+  const faders=document.querySelectorAll('.fade-in');
+  const appearOptions={ threshold:0.1, rootMargin:"0px 0px -50px 0px" };
+  const appearOnScroll=new IntersectionObserver(function(entries,observer){
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader=>appearOnScroll.observe(fader));
+</script>
+</body>
+</html>
