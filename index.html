@@ -55,6 +55,14 @@
   /* Highlight effect */
   .highlight { background:#111; padding:20px; border-radius:10px; transition:transform 0.3s, box-shadow 0.3s; }
   .highlight:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,200,255,0.4); }
+
+  /* Mobile / tablet responsive */
+  @media (max-width: 768px) {
+    section { padding: 50px 15px; }
+    #hero h1 { font-size:2rem; }
+    #hero p { font-size:1rem; }
+    #about p, #team p, #gear p, #qualities li { font-size:1rem; }
+  }
 </style>
 </head>
 <body>
@@ -130,39 +138,44 @@
   </section>
 
 <script>
-  // Typewriter Effect
+  // Typewriter Effect - Mobile-Friendly
   const typewriterText = ["Sim Racer", "Student", "Strategist"];
-  let i=0, j=0;
+  let i = 0, j = 0;
   const typewriterEl = document.getElementById("typewriter");
-  function typeWriter(){
-    if(i<typewriterText.length){
-      if(j<typewriterText[i].length){
-        typewriterEl.innerHTML += typewriterText[i][j];
-        j++;
-        setTimeout(typeWriter,150);
-      }else{
-        setTimeout(()=>{
-          typewriterEl.innerHTML="";
-          j=0;
-          i=(i+1)%typewriterText.length;
-          typeWriter();
-        },1500);
-      }
+
+  function typeWriter() {
+    typewriterEl.innerHTML = typewriterText[i].substring(0, j) + '<span>|</span>';
+    j++;
+    if (j > typewriterText[i].length) {
+      setTimeout(() => {
+        j = 0;
+        i = (i + 1) % typewriterText.length;
+        typeWriter();
+      }, 1500);
+    } else {
+      setTimeout(typeWriter, 150);
     }
   }
   typeWriter();
 
-  // Scroll fade-in animation
-  const faders=document.querySelectorAll('.fade-in');
-  const appearOptions={ threshold:0.1, rootMargin:"0px 0px -50px 0px" };
-  const appearOnScroll=new IntersectionObserver(function(entries,observer){
-    entries.forEach(entry=>{
-      if(!entry.isIntersecting) return;
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
-  faders.forEach(fader=>appearOnScroll.observe(fader));
+  // Scroll Fade-in - Mobile-Friendly
+  const faders = document.querySelectorAll('.fade-in');
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    faders.forEach(fader => fader.classList.add('show'));
+  } else {
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  }
 </script>
 </body>
 </html>
